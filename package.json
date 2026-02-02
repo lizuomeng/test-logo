@@ -3,9 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxi build --dotenv .env.test",
-    "build:test": "nuxi build --dotenv .env.test",
-    "build:prod": "nuxi build --dotenv .env.prod",
+    "build": "nuxi build --dotenv .env.prod",
     "dev": "nuxi dev --dotenv .env.development --open",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
