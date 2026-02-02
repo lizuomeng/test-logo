@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'rozha';
+  src: url('/fonts/Rozha-one.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'bebasNeue';
+  src: url('/fonts/BebasNeue.otf');
+  font-display: swap;
+}
+
+.rozha {
+  font-family: 'rozha' !important;
+}
+.bebasNeue {
+  font-family: 'bebasNeue' !important;
+}
+
+body, html {
+  font-size: 4px;
+  background: #fff;
+}
+
+:root {
+  --bg-color: #3D39FF;
+  --n-header-height: 60px;
+}
+
+.main-bg-gradient {
+  background: linear-gradient(95.34deg, #CBE0FF 0%, #3D39FF 95.5%);
+}
+
+.year-gradient {
+  display: inline-block;
+  background: linear-gradient(90deg, #5C40FF 0%, #BA42F6 41.83%, #FF41CF 73.56%, #FF208C 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.el-overlay.is-message-box {
+  z-index: 9000 !important;
+}
+
+@media (max-width: 768px) {
+  .list-scroll-wrap::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "test-logo",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxi build --dotenv .env.test",
+    "build:test": "nuxi build --dotenv .env.test",
+    "build:prod": "nuxi build --dotenv .env.prod",
+    "dev": "nuxi dev --dotenv .env.development --open",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vueuse/core": "^12.3.0",
+    "animate.css": "^4.1.1",
+    "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "@element-plus/nuxt": "^1.0.9",
+    "@nuxtjs/i18n": "^8.5.1",
+    "@pinia/nuxt": "^0.5.1",
+    "@unocss/nuxt": "^0.60.0",
+    "@unocss/preset-rem-to-px": "^0.62.2",
+    "@vueuse/nuxt": "^10.9.0",
+    "element-plus": "^2.7.7",
+    "eslint": "^9.2.0",
+    "nuxt": "3.14.0",
+    "nuxt-lodash": "^2.5.3",
+    "pinia": "^2.1.7",
+    "typescript": "^5.4.5",
+    "vue-tsc": "^2.0.17"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
