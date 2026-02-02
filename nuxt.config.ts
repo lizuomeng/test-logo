@@ -44,7 +44,6 @@ export default defineNuxtConfig({
     'animate.css',
   ],
   nitro: {
-    preset: process.env.NODE_ENV === 'production' ? 'vercel' : 'node-server',
     compressPublicAssets: true,
     externals: {
       inline: ['cookie-es'],
