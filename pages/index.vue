@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { httpGetSampleTagNamesVisitor, httpPostDesignTemplateList } from '~/api'
+import { httpGetSampleTagNamesVisitor, httpPostDesignTemplateList } from '~/serverApi'
 
 const { t } = useI18n()
 const config = useRuntimeConfig()
@@ -109,6 +109,7 @@ const { data: showcaseData } = useLazyAsyncData(
   'home-showcase-data',
   async () => {
     const styleRes = await httpPostDesignTemplateList({ pageSize: 12, taskType: 'txt2img' })
+    console.log('styleRes', styleRes)
     if (styleRes.data.value?.success) {
       const list = styleRes.data.value.data?.list || []
       return list.map((item: any) => ({

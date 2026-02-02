@@ -4,11 +4,6 @@ const localePath = useLocalePath()
 
 const menuList = [
   { label: 'menu.Home', path: '/' },
-  { label: 'menu.Logo', path: '/ai-logo-generator/text-to-logo' },
-  { label: 'menu.AI Image', path: '/ai-image-maker' },
-  { label: 'menu.AI Video', path: '/ai-video-maker' },
-  { label: 'menu.AI Tools', path: '/ai-tools' },
-  { label: 'menu.Pricing', path: '/pricing' },
 ]
 
 const { width } = useWindowSize()
@@ -40,7 +35,6 @@ const mobileMenuOpen = ref(false)
         </nav>
 
         <div class="min-w-84 flex-a-c justify-end">
-          <LoginButton />
         </div>
       </div>
 
