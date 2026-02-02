@@ -4,7 +4,12 @@
       "Bash(find:*)",
       "Bash(npx nuxi@latest init:*)",
       "Bash(pnpm install:*)",
-      "Bash(npx nuxi build:*)"
+      "Bash(npx nuxi build:*)",
+      "Bash(node -e:*)",
+      "Bash(npm view:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(npx nuxi prepare:*)"
     ]
   }
 }

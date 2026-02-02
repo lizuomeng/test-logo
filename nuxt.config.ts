@@ -30,8 +30,8 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     baseUrl: process.env.NUXT_WEB_HOST,
     lazy: true,
-    langDir: 'locales/lazy',
-    vueI18n: './locales/index.ts',
+    langDir: '../locales/lazy',
+    vueI18n: '../locales/index.ts',
     detectBrowserLanguage: false,
   },
   experimental: {
@@ -44,10 +44,14 @@ export default defineNuxtConfig({
     'animate.css',
   ],
   nitro: {
+    preset: process.env.NODE_ENV === 'production' ? 'vercel' : 'node-server',
     compressPublicAssets: true,
-    esbuild: {
-      options: {
-        target: 'esnext',
+    externals: {
+      inline: ['cookie-es'],
+    },
+    unenv: {
+      alias: {
+        'cookie-es': 'cookie-es',
       },
     },
     devProxy: {
@@ -68,6 +72,9 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    ssr: {
+      noExternal: ['cookie-es'],
+    },
     build: {
       minify: true,
       rollupOptions: {
@@ -110,5 +117,4 @@ export default defineNuxtConfig({
     host: '0.0.0.0',
     port: 3000,
   },
-  compatibilityDate: '2024-07-22',
 })
